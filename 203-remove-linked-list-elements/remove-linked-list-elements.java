@@ -12,14 +12,13 @@
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
 
-        // Dummy node to simplify head removal
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode current = dummy;
 
         while (current.next != null) {
             if (current.next.val == val) {
-                // Skip node
+          
                 current.next = current.next.next;
             } else {
                 current = current.next;
